@@ -54,7 +54,7 @@ public class RecipeMenuAdapter extends BaseAdapter {
 
         LinearLayout linear_tag_layout = convertView.findViewById(R.id.list_item_tags);
 
-        image.setImageResource(R.drawable.pancakes);
+        image.setImageURI(recipes.get(position).getImage());
         category.setText(recipes.get(position).getCategory());
         name.setText(recipes.get(position).getName());
 

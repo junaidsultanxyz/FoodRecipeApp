@@ -1,16 +1,32 @@
 package com.junaid.foodrecipeapp.repository;
+/*
+    1427565591
+    7255
+ */
 
+import android.net.Uri;
 
 import java.util.ArrayList;
 
 public class Recipe {
     long id;
+    Uri image;
     String name;
     String category;
     String description;
     String ingredients;
     String instructions;
     ArrayList<String> tags;
+
+    public Recipe(Uri image, String name, String category, String description, String ingredients, String instructions, ArrayList<String> tags) {
+        this.image = image;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+        this.tags = tags;
+    }
 
     public Recipe(String name, String category, String description, String ingredients, String instructions) {
         this.name = name;
@@ -23,6 +39,12 @@ public class Recipe {
 
     public long getId() {
         return id;
+    }
+    public Uri getImage() {
+        return image;
+    }
+    public void setImage(Uri image) {
+        this.image = image;
     }
     public void setId(long id) {
         this.id = id;
