@@ -12,7 +12,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.junaid.foodrecipeapp.databinding.ActivityMainBinding;
 import com.junaid.foodrecipeapp.repository.RecipeApp;
 import com.junaid.foodrecipeapp.repository.Recipe;
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         initComponents();
